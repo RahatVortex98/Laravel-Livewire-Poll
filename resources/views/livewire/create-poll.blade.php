@@ -1,3 +1,35 @@
 <div>
-    {{-- If you look to others for fulfillment, you will never truly be fulfilled. --}}
+    <form wire:submit.prevent="createPoll">
+        <label>Poll title</label>
+        <input type="text" wire:model="title" placeholder="Type your poll title"/>
+
+        @error('title')
+            <div class="text-red-500">{{ $message }}</div>
+        @enderror
+            
+    
+
+        <div class="mb-4">
+            <button type="button" class="btn" wire:click.prevent="addOption">Add option</button>
+        </div>
+
+        <div class="mt-4">
+            @foreach ($options as $index => $option)
+                <div class="mb-4">
+                    <label>Option {{ $index + 1 }}</label>
+                    <div class="flex gap-2">
+                        <input type="text" wire:model="options.{{ $index }}" class="border p-2 w-full">
+
+                        
+                        <button type="button" class="btn" wire:click.prevent="removeOption({{ $index }})">Remove</button>
+                    </div>
+                    @error('options')
+            <div class="text-red-500">{{ $message }}</div>
+        @enderror
+                </div>
+            @endforeach
+        </div>
+
+        <button type="submit" class="btn">Create Poll</button>
+    </form>
 </div>

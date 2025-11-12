@@ -10,6 +10,8 @@ class Option extends Model
     /** @use HasFactory<\Database\Factories\OptionFactory> */
     use HasFactory;
 
+
+    protected $guarded = [];
     Public function poll(){
         return $this->belongsTo(Poll::class);
     }

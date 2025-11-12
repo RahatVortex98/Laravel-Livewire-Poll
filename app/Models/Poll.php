@@ -10,7 +10,7 @@ class Poll extends Model
     /** @use HasFactory<\Database\Factories\PollFactory> */
     use HasFactory;
 
-
+     protected $guarded = [];
 
     public function options(){
         return $this->hasMany(Option::class);
