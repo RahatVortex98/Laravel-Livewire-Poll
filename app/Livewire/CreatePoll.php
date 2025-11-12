@@ -14,7 +14,7 @@ class CreatePoll extends Component
 
     protected $rules=[
         'title'=> 'required',
-        'options'=>'required|array|min:3|max:10',
+        'options'=>'required|array|min:1|max:10',
         'options.*'=>'required|min:1|max:255'
     ];
     public function render()
@@ -47,7 +47,10 @@ class CreatePoll extends Component
         }
 
         $this->reset(['title','options']);
+       $this->dispatch('pollCreated');
+
     }
+    
 
 
 }

@@ -7,13 +7,21 @@ use Illuminate\Database\Eloquent\Model;
 
 class Vote extends Model
 {
-    /** @use HasFactory<\Database\Factories\VoteFactory> */
     use HasFactory;
 
-    public function poll(){
+    protected $fillable = [
+        'poll_id',
+        'option_id',
+        // 'user_id', // Uncomment if you use this later
+    ];
+
+    public function poll()
+    {
         return $this->belongsTo(Poll::class);
     }
-    public function option(){
+
+    public function option()
+    {
         return $this->belongsTo(Option::class);
     }
 }
