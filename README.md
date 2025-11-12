@@ -61,3 +61,5 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 <img width="563" height="533" alt="Polls Using Live Wire" src="https://github.com/user-attachments/assets/32c1adcf-679a-424e-9715-94373fc64591" />
 
+<img width="544" height="635" alt="Poll" src="https://github.com/user-attachments/assets/fe40bae6-2a66-475f-a6b8-657f9e1ae565" />
+
