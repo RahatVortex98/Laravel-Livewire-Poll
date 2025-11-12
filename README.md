@@ -58,3 +58,6 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 # Laravel-Livewire-Poll
+
+<img width="563" height="533" alt="Polls Using Live Wire" src="https://github.com/user-attachments/assets/32c1adcf-679a-424e-9715-94373fc64591" />
+
